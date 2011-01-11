@@ -1,0 +1,40 @@
+0.51 - 14/05/2010
+
+        + Add STARTTLS support (enabled by default if the parameter -ssl
+          is not specified)
+	- Rework the way connections are performed
+	- Add a password prompt if no password was specified
+        - Add a connection timeout in case there is no response from the
+          server, so the connection will be reseted after a certain
+          amount of time (setting "server_connect_timeout")
+	- /CYCLE command
+	- and many others minor changes and fixes
+
+0.50 - 07/08/2009
+
+	+ Complete rewrite with a modular architecture
+	+ Better integration in irssi, many bug fixes and a big code cleanup
+	+ Better support of XMPP
+	+ Multi-User Chat (XEP-0045), Entity Use Cases and Occupant Use Cases
+	+ Message Events (XEP-0022) and Chat State Notifications (XEP-0085)
+	  showed in the status-bar (status-bar "xmpp_composing"), you can
+	  disable events sending (setting "xmpp_send_composing")
+	+ XMPP Ping (XEP-0199) support using the command /PING, it also allows
+	  the lag-meter to work
+	+ Software Version (XEP-0092) support using /VER and vCard (XEP-0054)
+	  using /WHOIS (partial retrieve)
+	+ Delayed Delivery (XEP-0203) support
+	+ Better UTF-8 support
+	+ HTTP proxy support
+	+ commands /XMPPCONNECT and /XMPPSERVER to connect easily to an
+	  account
+	+ command /XMPPREGISTER to register an account using the In-Band
+	  Registration (XEP-0077)
+	- /ME command on queries and rooms
+	- tab completion of JIDs, resources, user names and groups
+	  (even with spaces)
+	- changing the priority (setting "xmpp_priority") takes effect
+	  immediately
+	- basic status changes window (setting "xmpp_status_window") and raw
+	  window (setting "xmpp_raw_window")
+	- and many others minor changes and fixes
