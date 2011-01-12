@@ -31,6 +31,6 @@ SRCS=	xmpp-commands.c \
 	xep/version.c \
 	xep/xep.c
 
-LIB_LIBS = `pkg-config --libs loudmouth-1.0`
+LIB_LIBS = -L/home/jer/build/lib -lloudmouth-1 -lglib-2.0
 
 include ../rules.mk

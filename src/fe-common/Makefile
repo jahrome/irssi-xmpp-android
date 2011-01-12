@@ -22,6 +22,6 @@ SRCS=	fe-xmpp-messages.c \
 
 
 LIB_INCS = -I../../src/fe-common 
-LIB_LIBS = `pkg-config --libs glib-2.0`
+LIB_LIBS = -L/home/jer/build/lib -lglib-2.0
 
 include ../rules.mk

@@ -8,5 +8,6 @@ SRCS=	text-xmpp-core.c \
 
 LIB_INCS = -I../../src/fe-text/include/irssi/src/fe-text
 LIB_LIBS = `pkg-config --libs glib-2.0`
+LIB_LIBS = -L/home/jer/build/lib -lglib-2.0 -lgmodule-2.0
 
 include ../rules.mk

@@ -1,14 +1,14 @@
 # paths
-PREFIX ?= /usr/local
+PREFIX ?= /home/jer/Projet_android/my_projects
 
 # where are the sources of irssi?
-IRSSI_INCLUDE ?= ${PREFIX}/include/irssi
+IRSSI_INCLUDE ?= ${PREFIX}/irssi
 # where should be installed the module?
-IRSSI_LIB ?= ${PREFIX}/lib/irssi
+IRSSI_LIB ?= /home/jer/build
 # where should be installed the documentation?
-IRSSI_DOC ?= ${PREFIX}/share/doc/irssi
+IRSSI_DOC ?= /home/jer/build/doc
 # where should be installed the help for commands ?
-IRSSI_HELP ?= ${PREFIX}/share/irssi/help
+IRSSI_HELP ?= /home/jer/build/help
 
 # includes and libs
 INCS =	${LIB_INCS} \
@@ -18,7 +18,7 @@ INCS =	${LIB_INCS} \
 	-I${IRSSI_INCLUDE}/src/core \
 	-I$(IRSSI_INCLUDE)/src/fe-common/core \
 	-I$(IRSSI_INCLUDE)/src/fe-text \
-	`pkg-config --cflags loudmouth-1.0`
+	-I${PREFIX}/loudmouth
 LIBS =	${LIB_LIBS}
 
 # flags
@@ -29,4 +29,4 @@ LDFLAGS += -shared ${LIBS}
 CFLAGS += -W -ggdb -Wall -Wno-unused-parameter
 
 # compiler and linker
-CC = cc
+CC = agcc
