@@ -4,7 +4,7 @@ include ../../config.mk
 
 OBJS = ${SRCS:.c=.o}
 
-all: ${LIB}
+all: ${OBJS}
 
 .c.o:
 	${CC} ${CFLAGS} -o $@ -c $<
